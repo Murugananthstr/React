@@ -3,7 +3,7 @@
     "public": "build",
     "predeploy": ["yarn install", "yarn run build"],
     "ignore": [
-      "firebase.json",
+      "./firebase.json",
       "**/.*",
       "**/node_modules/**"
     ],
