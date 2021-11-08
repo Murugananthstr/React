@@ -1,13 +1,23 @@
-import "./App.css";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Signin from "./components/auth/SignIn";
+import Signup from "./components/auth/SignUp";
+import DashBoard from "./components/dashboard/DashBoard";
+import NavBar from "./components/layout/NavBar";
+import Blog from "./components/Blogs/blog";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <div>Deploy from Github</div>
-        Learn React
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <NavBar />
+        <Switch>
+          <Route path="/Signin" component={Signin} />
+          <Route path="/Signup" component={Signup} />
+          <Route path="/Blogs" component={Blog} />
+          <Route path="/" component={DashBoard} />
+        </Switch>
+      </BrowserRouter>
+    </>
   );
 }
 
